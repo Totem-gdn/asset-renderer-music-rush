@@ -17,6 +17,7 @@ class NFT {
       const contractHandler = new ContractHandler(this.ApiURL, this.Contracts[type]);
       const dna = await contractHandler.getDNA(id);
       const parser = new DNAParser(filterJson, dna);
+      console.log('parser', parser);
       const properties = parser.getFilterPropertiesList()
       let jsonProp = {...properties};
       let settings = {};

@@ -16,6 +16,7 @@ class NFTController {
     if (type === 'avatar') {
       const nft = await nftHelper.get(type, id);
       console.log('nfft', nft);
+      nft['glow_color'] = nft.primary_color.replace(')', ', 0.5)').replace('rgb', 'rgba');
 
       if (nft) {
         res.setHeader('Content-Type', 'image/svg+xml');
