@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="{{width}}" height="{{height}}" viewBox="0 0 700 700">
+	{{#ifeq glow 'true'}}
     <g style="filter: drop-shadow(0px 0px 150px {{glow_color}});" transform="translate(120, 140)">
-       
+    {{/ifeq}}
+    {{#ifeq glow 'false'}}
+    <g transform="translate(120, 140)">
+    {{/ifeq}}
 <style type="text/css">
 	.hair_color{
         fill:{{hair_color}};
