@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 667950714614.dkr.ecr.us-east-1.amazonaws.com/asset-renderer-music-rush
+  repository: 667950714614.dkr.ecr.us-east-2.amazonaws.com/asset-renderer-music-rush
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "prod"
@@ -60,12 +60,6 @@ tolerations:
     effect: "NoSchedule"
 
 env:
-   host: ""
-   port: ""
-   API_URL: ""
-   AVATAR_CONTRACT: ""
-   GEM_CONTRACT: ""
-   ITEM_CONTRACT: ""
-   CACHE_MAX_AGE: ""
+  ENV: ""
 
 
